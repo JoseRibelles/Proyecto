@@ -1,0 +1,60 @@
+.hero-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+/* Imagen hero */
+.hero {
+  width: 100%;
+  height: clamp(180px, 30vh, 420px);
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  margin: 0;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Sección del mensaje/quote (debajo de la imagen) */
+.hero-quote-section {
+  width: 100%;
+  background: #fff;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.hero-quote {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 1.06rem;
+  line-height: 1.7;
+  color: #444;
+  font-style: italic;
+  text-align: center;
+}
+
+.hero-quote p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-quote {
+    font-size: 1rem;
+    padding: 0 12px;
+  }
+}
+/* SOLUCIÓN MÍNIMA: forzar que la imagen del hero sea visible */
+.hero img,
+.hero-img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

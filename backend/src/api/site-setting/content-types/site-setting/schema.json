@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "site setting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topBarText": {
+      "type": "string"
+    },
+    "topBarPhones": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "rightHeaderText": {
+      "type": "string"
+    },
+    "cookieText": {
+      "type": "blocks"
+    },
+    "cookieAcceptLabel": {
+      "type": "string",
+      "default": "D'acord"
+    },
+    "homeImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heroQuote": {
+      "type": "string"
+    },
+    "herQuoteAutor": {
+      "type": "string"
+    }
+  }
+}
