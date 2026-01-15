@@ -48,7 +48,7 @@
     padding: 0 12px;
   }
 }
-/* SOLUCIÓN MÍNIMA: forzar que la imagen del hero sea visible */
+
 .hero img,
 .hero-img {
   display: block !important;

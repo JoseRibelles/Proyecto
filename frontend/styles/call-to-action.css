@@ -1,0 +1,132 @@
+.cta-section {
+  width: 100%;
+  padding:  80px 20px;
+  background: #f9f9f9;
+}
+
+.cta-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width:  1100px;
+  margin: 0 auto;
+}
+
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 32px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.cta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(109, 126, 79, 0.2);
+}
+
+.cta-primary {
+  background: linear-gradient(135deg, #6D7E4F 0%, #8a9d65 100%);
+  color: white;
+}
+
+.cta-primary .cta-title,
+.cta-primary .cta-description {
+  color: white;
+}
+
+.cta-secondary {
+  background: white;
+  border: 2px solid #6D7E4F;
+}
+
+.cta-icon {
+  font-size: 3. 5rem;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.cta-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight:  700;
+  color: #6D7E4F;
+  margin:  0 0 16px;
+}
+
+.cta-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 28px;
+  max-width: 400px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-primary .cta-button {
+  background: white;
+  color: #6D7E4F;
+}
+
+.cta-primary .cta-button:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
+}
+
+.cta-secondary .cta-button {
+  background: #6D7E4F;
+  color: white;
+}
+
+.cta-secondary .cta-button:hover {
+  background: #5a6a3f;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 16px;
+  }
+
+  .cta-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cta-card {
+    padding: 40px 24px;
+  }
+
+  .cta-icon {
+    font-size: 3rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-description {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
