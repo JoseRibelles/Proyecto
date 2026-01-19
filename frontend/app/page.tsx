@@ -7,7 +7,8 @@ import Nav from '../components/Nav';
 import Hero from '../components/Hero';
 import HighlightedCards from '../components/HighlightedCards';
 import CallToAction from '../components/CallToAction';
-import Footer from '../components/Footer';  // ← Debe estar EXACTAMENTE así
+import MapLocation from '../components/MapLocation';
+import Footer from '../components/Footer';
 import { strapiMedia, getStrapiData } from '../lib/strapi';
 
 export default function Home() {
@@ -18,9 +19,9 @@ export default function Home() {
     (async () => {
       try {
         const json = await getStrapiData('/api/site-setting? populate=*');
-        const data = json?.data ??  null;
+        const data = json?. data ??  null;
         const attrs = data?.attributes ?? data ??  null;
-        if (attrs?. logo) attrs.logoUrl = strapiMedia(attrs.logo);
+        if (attrs?.logo) attrs.logoUrl = strapiMedia(attrs.logo);
         const candidateMedia = attrs?.homeImage ??  attrs?.homeimage ?? attrs?.heroImage ?? attrs?.home;
         if (candidateMedia) attrs.homeImageUrl = strapiMedia(candidateMedia);
         setSite(attrs);
@@ -41,9 +42,9 @@ export default function Home() {
   }, []);
 
   if (loading) return <div style={{ padding: '40px', textAlign: 'center' }}>Carregant...</div>;
-  if (!site) return <div style={{ padding:  '40px', textAlign: 'center' }}>No hi ha dades</div>;
+  if (!site) return <div style={{ padding: '40px', textAlign: 'center' }}>No hi ha dades</div>;
 
-  const heroUrl = site.homeImageUrl ??  site.heroImageUrl ?? 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1200&h=400&fit=crop';
+  const heroUrl = site.homeImageUrl ??  site.heroImageUrl ??  'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1200&h=400&fit=crop';
 
   return (
     <>
@@ -53,6 +54,7 @@ export default function Home() {
       <Hero imageUrl={heroUrl} />
       <HighlightedCards />
       <CallToAction />
+      <MapLocation />
       <Footer />
     </>
   );

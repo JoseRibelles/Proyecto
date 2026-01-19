@@ -1,0 +1,126 @@
+.legal-page {
+  width: 100%;
+  min-height: 60vh;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 48px;
+  box-shadow:  0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.legal-header {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom:  2px solid #6D7E4F;
+}
+
+.legal-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #6D7E4F;
+  margin:  0 0 12px;
+}
+
+.legal-updated {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #777;
+  margin:  0;
+  font-style: italic;
+}
+
+.legal-content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height:  1.8;
+  color: #333;
+}
+
+.legal-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight:  700;
+  color: #6D7E4F;
+  margin:  40px 0 20px;
+}
+
+.legal-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.35rem;
+  font-weight:  600;
+  color: #6D7E4F;
+  margin: 32px 0 16px;
+}
+
+.legal-content p {
+  margin: 0 0 16px;
+  line-height: 1.8;
+}
+
+.legal-content ul,
+.legal-content ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.legal-content li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.legal-content strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.legal-content a {
+  color: #6D7E4F;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.legal-content a:hover {
+  color: #5a6a3f;
+}
+
+.legal-info-box {
+  background: #f0f4e8;
+  border-left:  4px solid #6D7E4F;
+  padding:  20px 24px;
+  margin: 24px 0;
+  border-radius: 4px;
+}
+
+.legal-info-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 40px 16px;
+  }
+
+  .legal-container {
+    padding: 32px 24px;
+  }
+
+  .legal-title {
+    font-size: 2rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .legal-content h3 {
+    font-size: 1.2rem;
+  }
+}

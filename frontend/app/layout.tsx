@@ -1,8 +1,12 @@
+import '../styles/globals.css';
 import '../styles/menu.css';
 import '../styles/hero.css';
 import '../styles/highlighted-cards.css';
 import '../styles/call-to-action.css';
+import '../styles/map-location.css';
 import '../styles/footer.css';
+import '../styles/legal-pages.css';
+import '../styles/content-pages.css';  // ← DEBE ESTAR AQUÍ
 
 export const metadata = {
   title: 'Col·legi Lluís Millet',

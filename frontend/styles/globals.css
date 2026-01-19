@@ -1,0 +1,91 @@
+/* ============================================
+   RESET CSS Y ESTILOS GLOBALES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background:  #ffffff;
+  line-height: 1.6;
+}
+
+main {
+  width: 100%;
+  margin:  0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Eliminar márgenes de elementos comunes */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Imágenes responsivas por defecto */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Links sin subrayado por defecto */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botones sin estilos por defecto */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor:  pointer;
+  font-family: inherit;
+}
+
+/* Listas sin viñetas por defecto */
+ul, ol {
+  list-style: none;
+}
+
+/* Formularios heredan fuente */
+input, textarea, select, button {
+  font-family:  inherit;
+  font-size: inherit;
+}
+
+/* Accesibilidad:  focus visible */
+*:focus-visible {
+  outline: 2px solid #6D7E4F;
+  outline-offset:  2px;
+}
+
+/* Eliminar scroll horizontal */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Asegurar que las secciones ocupen todo el ancho */
+section {
+  width: 100%;
+  margin: 0;
+  padding:  0;
+}
