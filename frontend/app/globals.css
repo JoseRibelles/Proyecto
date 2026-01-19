@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&: is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -11,18 +11,18 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent:  var(--sidebar-accent);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
+  --color-sidebar:  var(--sidebar);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
-  --color-input: var(--input);
+  --color-input:  var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
@@ -48,7 +48,7 @@
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground:  oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
@@ -118,5 +118,212 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MEJORAS VISUALES
+   ============================================ */
+
+/* TOPBAR RESPONSIVE */
+@media (max-width: 768px) {
+  .topbar-inner {
+    flex-direction: column ! important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  
+  .topbar-left,
+  .topbar-right {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* HEADER RESPONSIVE */
+@media (max-width:  768px) {
+  .site-header .container {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  .logo-and-title {
+    justify-content: center !important;
+  }
+
+  .site-logo {
+    max-height: 50px !important;
+  }
+
+  .header-right {
+    text-align: center !important;
+  }
+}
+
+/* NAV RESPONSIVE */
+@media (max-width: 1024px) {
+  .nav-list {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .nav-item {
+    font-size: 0.85rem !important;
+  }
+
+  .nav-summary,
+  .nav-link {
+    padding: 14px 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    position: relative !important;
+  }
+
+  .nav-list {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .nav-item {
+    width: 100% !important;
+    border-bottom: 1px solid #e8f0dc;
+  }
+
+  .nav-summary,
+  .nav-link {
+    width: 100% !important;
+    text-align: left !important;
+    padding: 16px 20px !important;
+  }
+
+  .dropdown-wrap {
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: #f9f9f9 !important;
+  }
+
+  .submenu {
+    padding-left: 20px !important;
+  }
+}
+
+/* FOOTER RESPONSIVE */
+@media (max-width: 1024px) {
+  footer > div:first-child {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 16px 16px ! important;
+  }
+
+  footer > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  footer h3 {
+    font-size: 1.1rem !important;
+  }
+
+  footer div:last-child {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+}
+
+/* PÁGINAS DE CONTENIDO RESPONSIVE */
+@media (max-width: 768px) {
+  /* Hero sections */
+  section[style*="height: 320px"],
+  section[style*="height: 320px"] {
+    height: 240px !important;
+    background-size: cover !important;
+  }
+
+  /* Títulos */
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem) !important;
+  }
+
+  /* Párrafos */
+  p {
+    font-size: clamp(0.95rem, 3vw, 1.05rem) !important;
+  }
+
+  /* Grids */
+  [style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Padding de secciones */
+  section {
+    padding: 48px 16px !important;
+  }
+
+  /* Botones */
+  a[style*="padding"][style*="border-radius"] {
+    padding:  12px 20px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Breadcrumbs más pequeños */
+  div[style*="fontSize: '0.9rem'"] {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem !important;
+  }
+
+  section {
+    padding: 32px 12px !important;
+  }
+}
+
+/* Prevenir scroll horizontal */
+body {
+  overflow-x: hidden ! important;
+}
+
+* {
+  max-width: 100%;
+}
+
+img {
+  height: auto !important;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejorar legibilidad en móvil */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px !important;
+    line-height: 1.6 ! important;
   }
 }
