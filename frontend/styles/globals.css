@@ -21,13 +21,13 @@ body {
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
   color: #333;
-  background:  #ffffff;
+  background: #ffffff;
   line-height: 1.6;
 }
 
 main {
   width: 100%;
-  margin:  0;
+  margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
@@ -56,7 +56,7 @@ button {
   background: none;
   border: none;
   padding: 0;
-  cursor:  pointer;
+  cursor: pointer;
   font-family: inherit;
 }
 
@@ -67,14 +67,14 @@ ul, ol {
 
 /* Formularios heredan fuente */
 input, textarea, select, button {
-  font-family:  inherit;
+  font-family: inherit;
   font-size: inherit;
 }
 
-/* Accesibilidad:  focus visible */
+/* Accesibilidad: focus visible */
 *:focus-visible {
   outline: 2px solid #6D7E4F;
-  outline-offset:  2px;
+  outline-offset: 2px;
 }
 
 /* Eliminar scroll horizontal */
@@ -87,5 +87,113 @@ html, body {
 section {
   width: 100%;
   margin: 0;
-  padding:  0;
+  padding: 0;
+}
+
+/* ============================================
+   HEADER Y LOGO
+   ============================================ */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  gap: 2rem;
+}
+
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-left .logo {
+  height: 200px !important;      /* ← AÑADIR !important */
+  width: auto !important;
+  object-fit: contain !important;
+  max-width: 200px !important;
+}
+
+.header-center {
+  flex: 2;
+  text-align: center;
+}
+
+.header-center h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-right {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-right p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .header-left .logo {
+    height: 80px;
+  }
+  
+  .header-center h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-right p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive - Móvil */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .header-left,
+  .header-center,
+  .header-right {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .header-left .logo {
+    height: 70px;
+    margin: 0 auto;
+  }
+  
+  .header-center h1 {
+    font-size: 1.3rem;
+  }
+  
+  .header-right p {
+    font-size: 0.85rem;
+  }
 }

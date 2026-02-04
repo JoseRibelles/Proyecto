@@ -18,15 +18,22 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       try {
-        const json = await getStrapiData('/api/site-setting? populate=*');
-        const data = json?. data ??  null;
-        const attrs = data?.attributes ?? data ??  null;
+        // ✅ SIN ESPACIO antes de populate
+        const json = await getStrapiData('/api/site-setting?populate=*');
+        const data = json?.data ?? null;
+        const attrs = data?.attributes ?? data ?? null;
+        
+        // Convertir logo a URL absoluta
         if (attrs?.logo) attrs.logoUrl = strapiMedia(attrs.logo);
-        const candidateMedia = attrs?.homeImage ??  attrs?.homeimage ?? attrs?.heroImage ?? attrs?.home;
+        
+        // Buscar homeImage con varios nombres posibles
+        const candidateMedia = attrs?.homeImage ?? attrs?.homeimage ?? attrs?.heroImage ?? attrs?.home;
         if (candidateMedia) attrs.homeImageUrl = strapiMedia(candidateMedia);
+        
         setSite(attrs);
       } catch (e) {
         console.error('Error conectando con Strapi:', e);
+        // Fallback a datos estáticos
         setSite({
           topBarText: 'Carrer Lluís Millet, 22, 08924',
           topBarPhones: '933 913 351 | a8076947@xtec.cat',
@@ -44,7 +51,7 @@ export default function Home() {
   if (loading) return <div style={{ padding: '40px', textAlign: 'center' }}>Carregant...</div>;
   if (!site) return <div style={{ padding: '40px', textAlign: 'center' }}>No hi ha dades</div>;
 
-  const heroUrl = site.homeImageUrl ??  site.heroImageUrl ??  'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1200&h=400&fit=crop';
+  const heroUrl = site.homeImageUrl ?? site.heroImageUrl ?? 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1200&h=400&fit=crop';
 
   return (
     <>
