@@ -17,9 +17,7 @@ export default function EducacioSecundaria() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -197,7 +195,7 @@ export default function EducacioSecundaria() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
             
-            <Link href="/etapes/secundaria/projectes" style={{ textDecoration: 'none' }}>
+            <Link href="/etapes/eso/projectes" style={{ textDecoration: 'none' }}>
               <div style={{ background: 'linear-gradient(135deg, #6D7E4F 0%, #8a9d65 100%)', padding: '48px 32px', borderRadius:  '16px', color: 'white', textAlign: 'center', cursor: 'pointer', transition: 'transform 0.3s', boxShadow: '0 4px 16px rgba(109,126,79,0.2)' }}
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-8px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
@@ -211,7 +209,7 @@ export default function EducacioSecundaria() {
               </div>
             </Link>
 
-            <Link href="/etapes/secundaria/orientacio" style={{ textDecoration:  'none' }}>
+            <Link href="/etapes/eso/orientacio" style={{ textDecoration:  'none' }}>
               <div style={{ background: 'linear-gradient(135deg, #8BC34A 0%, #6D7E4F 100%)', padding: '48px 32px', borderRadius: '16px', color: 'white', textAlign: 'center', cursor: 'pointer', transition: 'transform 0.3s', boxShadow: '0 4px 16px rgba(139,195,74,0.2)' }}
                 onMouseEnter={(e) => e.currentTarget.style. transform = 'translateY(-8px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
@@ -225,7 +223,7 @@ export default function EducacioSecundaria() {
               </div>
             </Link>
 
-            <Link href="/etapes/secundaria/activitats" style={{ textDecoration:  'none' }}>
+            <Link href="/etapes/eso/activitats" style={{ textDecoration:  'none' }}>
               <div style={{ background: 'linear-gradient(135deg, #6D7E4F 0%, #8a9d65 100%)', padding: '48px 32px', borderRadius: '16px', color: 'white', textAlign: 'center', cursor: 'pointer', transition: 'transform 0.3s', boxShadow: '0 4px 16px rgba(109,126,79,0.2)' }}
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-8px)'}
                 onMouseLeave={(e) => e.currentTarget.style. transform = 'translateY(0)'}>
@@ -243,7 +241,7 @@ export default function EducacioSecundaria() {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 }

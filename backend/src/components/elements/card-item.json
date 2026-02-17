@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_card_items",
+  "info": {
+    "displayName": "Card Item"
+  },
+  "options": {},
+  "attributes": {
+    "icono": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "enlace": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

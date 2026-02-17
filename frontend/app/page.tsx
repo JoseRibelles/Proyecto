@@ -55,14 +55,10 @@ export default function Home() {
 
   return (
     <>
-      <TopBar text={site.topBarText} phone={site.topBarPhones} />
-      <Header site={site} />
-      <Nav />
       <Hero imageUrl={heroUrl} />
       <HighlightedCards />
       <CallToAction />
       <MapLocation />
-      <Footer />
     </>
   );
 }

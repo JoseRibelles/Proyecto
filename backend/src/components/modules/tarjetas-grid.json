@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_modules_tarjetas_grids",
+  "info": {
+    "displayName": "Tarjetas Grid"
+  },
+  "options": {},
+  "attributes": {
+    "tituloSeccion": {
+      "type": "string"
+    },
+    "columnas": {
+      "type": "integer",
+      "default": 3
+    },
+    "tarjetas": {
+      "type": "component",
+      "component": "elements.card-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

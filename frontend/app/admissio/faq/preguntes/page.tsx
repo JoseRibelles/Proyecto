@@ -128,9 +128,7 @@ export default function PreguntesFrequents() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -148,9 +146,9 @@ export default function PreguntesFrequents() {
           <div style={{ fontFamily: 'Open Sans', fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', marginBottom: '24px' }}>
             <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Inici</Link>
             <span> / </span>
-            <Link href="/admissio-i-secretaria" style={{ color: 'white', textDecoration: 'none' }}>Admissió i secretaria</Link>
+            <Link href="/admissio" style={{ color: 'white', textDecoration: 'none' }}>Admissió i secretaria</Link>
             <span> / </span>
-            <Link href="/admissio-i-secretaria/faq-i-tramits" style={{ color: 'white', textDecoration: 'none' }}>FAQ i tràmits</Link>
+            <Link href="/admissio/faq" style={{ color: 'white', textDecoration: 'none' }}>FAQ i tràmits</Link>
             <span> / </span>
             <span>Preguntes freqüents</span>
           </div>
@@ -244,7 +242,7 @@ export default function PreguntesFrequents() {
               Contacta amb la nostra secretaria i t'ajudarem personalment amb el teu dubte
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/admissio-i-secretaria/faq-i-tramits/contacte-secretaria" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: '#6D7E4F', color: 'white', display: 'inline-block', transition: 'all 0.3s ease', boxShadow: '0 4px 12px rgba(109,126,79,0.3)' }}>
+              <Link href="/admissio/faq/contacte" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: '#6D7E4F', color: 'white', display: 'inline-block', transition: 'all 0.3s ease', boxShadow: '0 4px 12px rgba(109,126,79,0.3)' }}>
                 Contactar amb secretaria
               </Link>
               <a href="tel:933913351" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', border: '2px solid #6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
@@ -263,7 +261,7 @@ export default function PreguntesFrequents() {
           </h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
-            <Link href="/admissio-i-secretaria/faq-i-tramits/tramits-online" style={{ textDecoration: 'none' }}>
+            <Link href="/admissio/faq/tramits" style={{ textDecoration: 'none' }}>
               <div style={{ background: 'white', padding: '24px', borderRadius: '12px', border: '2px solid #e8f0dc', transition: 'all 0.3s ease', cursor: 'pointer', textAlign: 'center' }}
                    onMouseEnter={(e) => {
                      e.currentTarget.style.borderColor = '#6D7E4F';
@@ -280,7 +278,7 @@ export default function PreguntesFrequents() {
               </div>
             </Link>
 
-            <Link href="/admissio-i-secretaria/preinscripcio-i-matricula/informacio-general" style={{ textDecoration: 'none' }}>
+            <Link href="/admissio/preinscripcio/info" style={{ textDecoration: 'none' }}>
               <div style={{ background: 'white', padding: '24px', borderRadius: '12px', border: '2px solid #e8f0dc', transition: 'all 0.3s ease', cursor: 'pointer', textAlign: 'center' }}
                    onMouseEnter={(e) => {
                      e.currentTarget.style.borderColor = '#6D7E4F';
@@ -297,7 +295,7 @@ export default function PreguntesFrequents() {
               </div>
             </Link>
 
-            <Link href="/admissio-i-secretaria/calendari-escolar" style={{ textDecoration: 'none' }}>
+            <Link href="/admissio/calendari/horari" style={{ textDecoration: 'none' }}>
               <div style={{ background: 'white', padding: '24px', borderRadius: '12px', border: '2px solid #e8f0dc', transition: 'all 0.3s ease', cursor: 'pointer', textAlign: 'center' }}
                    onMouseEnter={(e) => {
                      e.currentTarget.style.borderColor = '#6D7E4F';
@@ -317,7 +315,7 @@ export default function PreguntesFrequents() {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 }

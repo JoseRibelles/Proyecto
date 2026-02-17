@@ -17,9 +17,7 @@ export default function BlogPrimaria() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+     
 
       {/* Hero */}
       <section style={{
@@ -96,7 +94,7 @@ export default function BlogPrimaria() {
       {/* CTA */}
       <section style={{ width: '100%', padding: '45px 20px', background: 'white' }}>
         <div style={{ maxWidth: '875px', margin: '0 auto', textAlign: 'center' }}>
-          <Link href="/blog-escolar" style={{
+          <Link href="/blog" style={{
             fontFamily: 'Montserrat', fontSize: '1.07rem', fontWeight: 600,
             padding: '14px 32px', color: '#5db0ff', border: '2px solid #5db0ff', borderRadius: '8px',
             background: 'transparent', textDecoration: 'none', letterSpacing: '0.04em'
@@ -106,7 +104,7 @@ export default function BlogPrimaria() {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 }

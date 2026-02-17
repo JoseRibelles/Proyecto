@@ -16,9 +16,7 @@ export default function ParticipacioVoluntariatAfa() {
   };
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite}/>
-      <Nav/>
+      
 
       {/* Hero */}
       <section style={{
@@ -33,9 +31,9 @@ export default function ParticipacioVoluntariatAfa() {
           <div style={{ fontFamily: 'Open Sans', fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', marginBottom: '24px' }}>
             <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Inici</Link>
             <span> / </span>
-            <Link href="/vida-escolar/comunitat" style={{ color: 'white', textDecoration: 'none' }}>Comunitat</Link>
+            <Link href="/comunitat" style={{ color: 'white', textDecoration: 'none' }}>Comunitat</Link>
             <span> / </span>
-            <Link href="/vida-escolar/comunitat/families" style={{ color: 'white', textDecoration: 'none' }}>Famílies i AFA</Link>
+            <Link href="/comunitat/families" style={{ color: 'white', textDecoration: 'none' }}>Famílies i AFA</Link>
             <span> / </span>
             <span>Participació i Voluntariat</span>
           </div>
@@ -78,7 +76,7 @@ export default function ParticipacioVoluntariatAfa() {
           </div>
         </div>
       </section>
-      <Footer/>
+      
     </>
   );
 }

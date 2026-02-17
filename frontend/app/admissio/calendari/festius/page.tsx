@@ -17,9 +17,7 @@ export default function DiesFestiusPeriodesLectius() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+     
 
       {/* Hero */}
       <section style={{
@@ -419,7 +417,7 @@ export default function DiesFestiusPeriodesLectius() {
               </div>
             </div>
             <div style={{ marginTop: '32px' }}>
-              <Link href="/admissio-i-secretaria/calendari-escolar" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
+              <Link href="/admissio/calendari/horari" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
                 ← Tornar al calendari principal
               </Link>
             </div>
@@ -427,7 +425,7 @@ export default function DiesFestiusPeriodesLectius() {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 }

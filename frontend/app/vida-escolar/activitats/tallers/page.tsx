@@ -17,9 +17,7 @@ export default function TallersActivitats() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+     
 
       {/* Hero */}
       <section style={{
@@ -341,10 +339,10 @@ export default function TallersActivitats() {
               Explora les excursions, colònies i altres activitats
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/vida-escolar/activitats-sortides/excursions-colonies" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block' }}>
+              <Link href="/vida-escolar/activitats/excursions" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block' }}>
                 Excursions i Colònies
               </Link>
-              <Link href="/vida-escolar/activitats-sortides" style={{ fontFamily:   'Montserrat', fontSize: '1rem', fontWeight:   600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block' }}>
+              <Link href="/vida-escolar/activitats" style={{ fontFamily:   'Montserrat', fontSize: '1rem', fontWeight:   600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block' }}>
                 Torna a Activitats
               </Link>
             </div>
@@ -352,7 +350,7 @@ export default function TallersActivitats() {
         </div>
       </section>
 
-      <Footer />
+     
     </>
   );
 }

@@ -17,9 +17,7 @@ export default function CalendariEscolar() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -243,18 +241,18 @@ export default function CalendariEscolar() {
               Explora els dies festius i els períodes lectius del curs
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/admissio-i-secretaria/calendari-escolar/dies-festius" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
-                Dies festius →
+              <Link href="/admissio/calendari/festius" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
+                Dies festius
               </Link>
-              <Link href="/admissio-i-secretaria/calendari-escolar/periodes-lectius" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block', transition: 'all 0.3s ease' }}>
-                Períodes lectius →
+              <Link href="/admissio/calendarir/festius" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block', transition: 'all 0.3s ease' }}>
+                Períodes lectius
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <Footer />
+     
     </>
   );
 }

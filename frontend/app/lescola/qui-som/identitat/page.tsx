@@ -17,9 +17,7 @@ export default function Identitat() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -259,7 +257,7 @@ export default function Identitat() {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 }

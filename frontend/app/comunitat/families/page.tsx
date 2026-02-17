@@ -16,9 +16,7 @@ export default function Families() {
   };
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones}/>
-      <Header site={defaultSite}/>
-      <Nav/>
+     
 
       {/* Hero */}
       <section style={{
@@ -49,19 +47,19 @@ export default function Families() {
         <div style={{ maxWidth: '1050px', margin: '0 auto', display: 'grid', gap: '32px', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           {[
             {
-              href: '/vida-escolar/comunitat/families/afa/objectius-funcions',
+              href: '/vida-escolar/comunitat/families/objectius',
               icon: '🎯',
               title: 'Objectius i funcions',
               desc: "Descobreix els objectius, valors i què fa l'AFA per a la comunitat escolar."
             },
             {
-              href: '/vida-escolar/comunitat/families/afa/activitats-familiars',
+              href: '/vida-escolar/comunitat/families/activitats',
               icon: '🎉',
               title: 'Activitats familiars',
               desc: 'Totes les activitats familiars, sortides, tallers i celebracions organitzades per l’AFA.'
             },
             {
-              href: '/vida-escolar/comunitat/families/afa/participacio-voluntariat',
+              href: '/vida-escolar/comunitat/families/participacio',
               icon: '🤲',
               title: 'Participació i voluntariat',
               desc: 'Implica’t a l’AFA i descobreix les opcions de voluntariat i col·laboració.'
@@ -75,7 +73,7 @@ export default function Families() {
           ))}
         </div>
       </section>
-      <Footer/>
+      
     </>
   );
 }

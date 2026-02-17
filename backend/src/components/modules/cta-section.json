@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_modules_cta_sections",
+  "info": {
+    "displayName": "CTA Section"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "boton1Texto": {
+      "type": "string"
+    },
+    "boton1URL": {
+      "type": "string"
+    },
+    "boton2Texto": {
+      "type": "string"
+    },
+    "boton2URL": {
+      "type": "string"
+    },
+    "colorFondo": {
+      "type": "string",
+      "default": " #6D7E4F"
+    },
+    "colorTexto": {
+      "type": "string",
+      "default": "#ffffff"
+    }
+  },
+  "config": {}
+}

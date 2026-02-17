@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import TopBar from '/../../../components/TopBar';
-import Header from '../../../../components/Header';
-import Nav from '../../../../components/Nav';
-import Footer from '../../../../components/Footer';
+import TopBar from '../../../components/TopBar';
+import Header from '../../../components/Header';
+import Nav from '../../../components/Nav';
+import Footer from '../../../components/Footer';
 
 export default function FAQiTramits() {
   const defaultSite = {
@@ -17,9 +17,7 @@ export default function FAQiTramits() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+     
 
       {/* Hero */}
       <section style={{
@@ -37,7 +35,7 @@ export default function FAQiTramits() {
           <div style={{ fontFamily: 'Open Sans', fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', marginBottom: '24px' }}>
             <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Inici</Link>
             <span> / </span>
-            <Link href="/admissio-i-secretaria" style={{ color: 'white', textDecoration: 'none' }}>Admissió i secretaria</Link>
+            <Link href="/admissio" style={{ color: 'white', textDecoration: 'none' }}>Admissió i secretaria</Link>
             <span> / </span>
             <span>FAQ i tràmits</span>
           </div>
@@ -92,7 +90,7 @@ export default function FAQiTramits() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
             {/* Preguntes freqüents */}
-            <Link href="/admissio-i-secretaria/faq-i-tramits/preguntes-frequents" style={{ textDecoration: 'none' }}>
+            <Link href="/admissio/faq/preguntes" style={{ textDecoration: 'none' }}>
               <div style={{ background: 'white', padding: '40px 32px', borderRadius: '16px', border: '2px solid #e8f0dc', boxShadow: '0 4px 16px rgba(109,126,79,0.08)', transition: 'all 0.3s ease', cursor: 'pointer', height: '100%' }}
                    onMouseEnter={(e) => {
                      e.currentTarget.style.borderColor = '#6D7E4F';
@@ -117,7 +115,7 @@ export default function FAQiTramits() {
             </Link>
 
             {/* Tràmits online */}
-            <Link href="/admissio-i-secretaria/faq-i-tramits/tramits-online" style={{ textDecoration: 'none' }}>
+            <Link href="/admissio/faq/tramits" style={{ textDecoration: 'none' }}>
               <div style={{ background: 'white', padding: '40px 32px', borderRadius: '16px', border: '2px solid #e8f0dc', boxShadow: '0 4px 16px rgba(109,126,79,0.08)', transition: 'all 0.3s ease', cursor: 'pointer', height: '100%' }}
                    onMouseEnter={(e) => {
                      e.currentTarget.style.borderColor = '#6D7E4F';
@@ -142,7 +140,7 @@ export default function FAQiTramits() {
             </Link>
 
             {/* Contacte secretaria */}
-            <Link href="/admissio-i-secretaria/faq-i-tramits/contacte-secretaria" style={{ textDecoration: 'none' }}>
+            <Link href="/admissio/faq/contacte" style={{ textDecoration: 'none' }}>
               <div style={{ background: 'white', padding: '40px 32px', borderRadius: '16px', border: '2px solid #e8f0dc', boxShadow: '0 4px 16px rgba(109,126,79,0.08)', transition: 'all 0.3s ease', cursor: 'pointer', height: '100%' }}
                    onMouseEnter={(e) => {
                      e.currentTarget.style.borderColor = '#6D7E4F';
@@ -224,7 +222,7 @@ export default function FAQiTramits() {
               Contacta directament amb la nostra secretaria i t'atenem personalment
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/admissio-i-secretaria/faq-i-tramits/contacte-secretaria" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
+              <Link href="/admissio/faq/contacte" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
                 Contactar amb secretaria
               </Link>
               <a href="tel:933913351" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block', transition: 'all 0.3s ease' }}>
@@ -235,7 +233,7 @@ export default function FAQiTramits() {
         </div>
       </section>
 
-      <Footer />
+     
     </>
   );
 }

@@ -10,7 +10,7 @@ export default function Header({ site }: { site? :    any }) {
       <header style={{
         background: '#ffffff',
         color: '#333',
-        padding:   '30px 20px',
+        padding:   '10px 20px',
         boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
         borderBottom: '1px solid #e8e8e8'
       }}>
@@ -30,7 +30,7 @@ export default function Header({ site }: { site? :    any }) {
                 src={logoSrc} 
                 alt="Logo" 
                 style={{
-                  height: '70px',
+                  height: '120px',
                   width: 'auto'
                 }}
                 onError={(e) => { (e.target as HTMLImageElement).src = '/logo.png'; }} 

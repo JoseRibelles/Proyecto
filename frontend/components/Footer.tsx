@@ -59,7 +59,7 @@ export default function Footer() {
               <Link href="/etapes/primaria" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}>› Educació Primària</Link>
             </li>
             <li style={{ marginBottom: '12px' }}>
-              <Link href="/vida-escolar/ampa" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}>› AMPA</Link>
+              <Link href="/comunitat/families/objectius" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}>› AMPA</Link>
             </li>
             <li style={{ marginBottom: '12px' }}>
               <Link href="/contacte/formulari" style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}>› Contacte</Link>
@@ -98,7 +98,7 @@ export default function Footer() {
             
             {/* Facebook */}
             <a 
-              href="https://facebook.com" 
+              href="https://www.facebook.com/escolalluismillet2016/?locale=es_ES" 
               target="_blank" 
               rel="noopener noreferrer" 
               style={{
@@ -137,7 +137,7 @@ export default function Footer() {
 
             {/* Instagram */}
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/ielluismillet/?hl=es" 
               target="_blank" 
               rel="noopener noreferrer" 
               style={{
@@ -176,7 +176,7 @@ export default function Footer() {
 
             {/* Twitter/X */}
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/EscolaMillet" 
               target="_blank" 
               rel="noopener noreferrer" 
               style={{
@@ -215,7 +215,7 @@ export default function Footer() {
 
             {/* YouTube */}
             <a 
-              href="https://youtube.com" 
+              href="https://www.youtube.com/@petitsmillet3877" 
               target="_blank" 
               rel="noopener noreferrer" 
               style={{

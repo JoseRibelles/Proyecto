@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_modules_herp_sections",
+  "info": {
+    "displayName": "Hero Section",
+    "icon": "arrowUp"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "subtitulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "botonTexto": {
+      "type": "string"
+    },
+    "botonURL": {
+      "type": "string"
+    },
+    "colorFondo": {
+      "type": "string",
+      "default": "#6D7E4F"
+    }
+  },
+  "config": {}
+}

@@ -25,9 +25,7 @@ export default function LegalPageLayout({ title, lastUpdated, children, site }: 
 
   return (
     <>
-      <TopBar text={siteData.topBarText} phone={siteData.topBarPhones} />
-      <Header site={siteData} />
-      <Nav />
+      
       
       <main className="legal-page">
         <div className="legal-container">
@@ -42,7 +40,7 @@ export default function LegalPageLayout({ title, lastUpdated, children, site }: 
         </div>
       </main>
 
-      <Footer />
+     
     </>
   );
 }

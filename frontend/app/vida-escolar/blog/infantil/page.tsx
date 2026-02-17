@@ -17,10 +17,7 @@ export default function BlogInfantil() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
-
+     
       {/* Hero */}
       <section style={{
         width: '100%',
@@ -96,7 +93,7 @@ export default function BlogInfantil() {
       {/* CTA */}
       <section style={{ width: '100%', padding: '45px 20px', background: 'white' }}>
         <div style={{ maxWidth: '875px', margin: '0 auto', textAlign: 'center' }}>
-          <Link href="/vida-escolar/blog-escolar" style={{
+          <Link href="/vida-escolar/blog" style={{
             fontFamily: 'Montserrat', fontSize: '1.07rem', fontWeight: 600,
             padding: '14px 32px', color: '#f4b45e', border: '2px solid #f4b45e', borderRadius: '8px',
             background: 'transparent', textDecoration: 'none', letterSpacing: '0.04em'
@@ -106,7 +103,7 @@ export default function BlogInfantil() {
         </div>
       </section>
 
-      <Footer />
+     
     </>
   );
 }

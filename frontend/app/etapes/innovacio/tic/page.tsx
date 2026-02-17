@@ -17,9 +17,7 @@ export default function TICRobotica() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -275,7 +273,7 @@ export default function TICRobotica() {
               <Link href="/etapes/innovacio/abp" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#2196F3', display: 'inline-block' }}>
                 ABP
               </Link>
-              <Link href="/etapes/innovacio/educacio-emocional" style={{ fontFamily:  'Montserrat', fontSize: '1rem', fontWeight:  600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block' }}>
+              <Link href="/etapes/innovacio/emocional" style={{ fontFamily:  'Montserrat', fontSize: '1rem', fontWeight:  600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block' }}>
                 Educació Emocional
               </Link>
             </div>
@@ -283,7 +281,7 @@ export default function TICRobotica() {
         </div>
       </section>
 
-      <Footer />
+     
     </>
   );
 }

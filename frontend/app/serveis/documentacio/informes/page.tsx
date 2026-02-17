@@ -22,9 +22,7 @@ export default function InformesFormularis() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -76,7 +74,7 @@ export default function InformesFormularis() {
         </div>
       </section>
 
-      <Footer/>
+     
     </>
   );
 }

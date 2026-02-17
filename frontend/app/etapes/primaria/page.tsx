@@ -17,9 +17,7 @@ export default function EducacioPrimaria() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -256,7 +254,7 @@ export default function EducacioPrimaria() {
         </div>
       </section>
 
-      <Footer />
+     
     </>
   );
 }

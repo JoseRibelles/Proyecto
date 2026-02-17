@@ -17,10 +17,7 @@ export default function PremisAcademics() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
-
+     
       {/* Hero */}
       <section style={{
         width: '100%',
@@ -215,7 +212,6 @@ export default function PremisAcademics() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }

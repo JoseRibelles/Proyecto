@@ -20,10 +20,7 @@ export default function MenuMensual() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones}/>
-      <Header site={defaultSite}/>
-      <Nav/>
-
+      
       {/* Hero */}
       <section style={{
         width: '100%', height: '320px',
@@ -71,7 +68,7 @@ export default function MenuMensual() {
         </div>
       </section>
 
-      <Footer/>
+      
     </>
   );
 }

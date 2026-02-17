@@ -17,9 +17,7 @@ export default function MetodologiesPrimaria() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+     
 
       {/* Hero */}
       <section style={{
@@ -267,7 +265,7 @@ export default function MetodologiesPrimaria() {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 }

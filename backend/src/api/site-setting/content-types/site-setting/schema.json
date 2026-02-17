@@ -50,6 +50,9 @@
     },
     "herQuoteAutor": {
       "type": "string"
+    },
+    "tittle": {
+      "type": "string"
     }
   }
 }

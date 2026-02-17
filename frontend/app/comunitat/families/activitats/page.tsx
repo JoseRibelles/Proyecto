@@ -16,9 +16,7 @@ export default function ActivitatsFamiliarsAfa() {
   };
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite}/>
-      <Nav/>
+      
 
       {/* Hero */}
       <section style={{
@@ -33,9 +31,9 @@ export default function ActivitatsFamiliarsAfa() {
           <div style={{ fontFamily: 'Open Sans', fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', marginBottom: '24px' }}>
             <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Inici</Link>
             <span> / </span>
-            <Link href="/vida-escolar/comunitat" style={{ color: 'white', textDecoration: 'none' }}>Comunitat</Link>
+            <Link href="/comunitat" style={{ color: 'white', textDecoration: 'none' }}>Comunitat</Link>
             <span> / </span>
-            <Link href="/vida-escolar/comunitat/families" style={{ color: 'white', textDecoration: 'none' }}>Famílies i AFA</Link>
+            <Link href="/comunitat/families" style={{ color: 'white', textDecoration: 'none' }}>Famílies i AFA</Link>
             <span> / </span>
             <span>Activitats Familiars</span>
           </div>
@@ -81,7 +79,7 @@ export default function ActivitatsFamiliarsAfa() {
           </div>
         </div>
       </section>
-      <Footer/>
+     
     </>
   );
 }

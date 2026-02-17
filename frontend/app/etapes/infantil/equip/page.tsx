@@ -56,9 +56,7 @@ export default function EquipInfantil() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -272,7 +270,7 @@ export default function EquipInfantil() {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 }

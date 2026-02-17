@@ -17,10 +17,7 @@ export default function FormularisDocumentacio() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
-
+     
       {/* Hero */}
       <section style={{
         width: '100%',
@@ -37,9 +34,9 @@ export default function FormularisDocumentacio() {
           <div style={{ fontFamily: 'Open Sans', fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', marginBottom: '24px' }}>
             <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Inici</Link>
             <span> / </span>
-            <Link href="/admissio-i-secretaria" style={{ color: 'white', textDecoration: 'none' }}>Admissió i secretaria</Link>
+            <Link href="/admissio" style={{ color: 'white', textDecoration: 'none' }}>Admissió i secretaria</Link>
             <span> / </span>
-            <Link href="/admissio-i-secretaria/preinscripcio-i-matricula" style={{ color: 'white', textDecoration: 'none' }}>Preinscripció i matrícula</Link>
+            <Link href="/admissio/preinscripcio" style={{ color: 'white', textDecoration: 'none' }}>Preinscripció i matrícula</Link>
             <span> / </span>
             <span>Formularis i documentació</span>
           </div>
@@ -328,18 +325,18 @@ export default function FormularisDocumentacio() {
               Revisa el calendari i la informació general del procés
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/admissio-i-secretaria/preinscripcio-i-matricula/informacio-general" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
-                ← Informació general
+              <Link href="/admissio/preinscripcio/info" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
+                Informació general
               </Link>
-              <Link href="/admissio-i-secretaria/preinscripcio-i-matricula/calendari-i-terminis" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block', transition: 'all 0.3s ease' }}>
-                ← Calendari i terminis
+              <Link href="/admissio/preinscripcio/terminis" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block', transition: 'all 0.3s ease' }}>
+                Calendari i terminis
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <Footer />
+      
     </>
   );
 }

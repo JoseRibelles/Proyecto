@@ -17,9 +17,7 @@ export default function BlogEscolar() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -105,7 +103,7 @@ export default function BlogEscolar() {
         </div>
       </section>
 
-      <Footer />
+     
     </>
   );
 }

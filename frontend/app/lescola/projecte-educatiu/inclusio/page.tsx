@@ -17,9 +17,7 @@ export default function Inclusio() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -291,7 +289,6 @@ export default function Inclusio() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }

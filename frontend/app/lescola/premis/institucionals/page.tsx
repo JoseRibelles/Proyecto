@@ -17,9 +17,7 @@ export default function ProjectesDestacats() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+     
 
       {/* Hero */}
       <section style={{
@@ -197,7 +195,6 @@ export default function ProjectesDestacats() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }

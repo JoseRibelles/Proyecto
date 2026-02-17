@@ -17,9 +17,7 @@ export default function EquipMonitoratge() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones}/>
-      <Header site={defaultSite}/>
-      <Nav/>
+     
 
       {/* Hero */}
       <section style={{
@@ -79,7 +77,7 @@ export default function EquipMonitoratge() {
           </div>
         </div>
       </section>
-      <Footer/>
+     
     </>
   );
 }

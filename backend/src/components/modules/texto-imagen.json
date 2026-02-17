@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_modules_texto_imagens",
+  "info": {
+    "displayName": "Texto Imagen"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "texto": {
+      "type": "blocks"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "posicion": {
+      "type": "enumeration",
+      "default": "izquierda",
+      "enum": [
+        "izquierda",
+        "derecha"
+      ]
+    },
+    "fondoColor": {
+      "type": "string",
+      "default": "#ffffff"
+    }
+  },
+  "config": {}
+}

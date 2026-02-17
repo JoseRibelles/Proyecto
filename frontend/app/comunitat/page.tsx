@@ -17,9 +17,7 @@ export default function Comunitat() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones}/>
-      <Header site={defaultSite}/>
-      <Nav/>
+      
 
       {/* Hero */}
       <section style={{
@@ -59,7 +57,7 @@ export default function Comunitat() {
       <section style={{ width: '100%', padding: '80px 0', background: '#f9f9f9' }}>
         <div style={{ maxWidth: '1050px', margin: '0 auto', display: 'grid', gap: '32px', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           {[{
-            href: '/vida-escolar/comunitat/families',
+            href: '/comunitat/families',
             title: 'Famílies i AFA',
             desc: 'Coneix la nostra associació, implicació i activitats familiars.',
             icon: '🤝'
@@ -72,7 +70,7 @@ export default function Comunitat() {
           ))}
         </div>
       </section>
-      <Footer/>
+      
     </>
   );
 }

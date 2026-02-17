@@ -17,9 +17,7 @@ export default function EducacioInfantil() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+     
 
       {/* Hero */}
       <section style={{
@@ -256,7 +254,6 @@ export default function EducacioInfantil() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }

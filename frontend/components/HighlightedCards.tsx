@@ -16,21 +16,21 @@ const highlightedCards: HighlightCard[] = [
     title: "El nostre projecte educatiu",
     description: "Un enfocament pedagògic innovador que acompanya cada infant en el seu creixement integral",
     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop",
-    link: "/escola/projecte-educatiu"
+    link: "/lescola/projecte-educatiu"
   },
   {
     id: 2,
     title: "Acompanyament personalitzat",
     description: "Atenció individualitzada i suport emocional per a cada alumne i les seves famílies",
     image: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&h=400&fit=crop",
-    link: "/escola/equip"
+    link: "/lescola/projecte-educatiu/metodologia"
   },
   {
     id: 3,
     title: "Entorn d'aprenentatge",
     description: "Espais dissenyats per fomentar la creativitat, l'autonomia i el treball cooperatiu",
-    image: "https://images.unsplash.com/photo-1577896851905-dc0f8c441d6e?w=600&h=400&fit=crop",
-    link: "/escola/installacions"
+    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&h=400&fit=crop",
+    link: "/lescola/qui-som/missio"
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const highlightedCards: HighlightCard[] = [
     title: "Comunitat educativa activa",
     description: "Famílies, professorat i alumnat treballant junts per construir una escola millor",
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=400&fit=crop",
-    link: "/comunitat/ampa"
+    link: "/comunitat/families/objectius"
   }
 ];
 

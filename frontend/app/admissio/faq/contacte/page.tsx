@@ -53,9 +53,7 @@ export default function ContacteSecretaria() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+     
 
       {/* Hero */}
       <section style={{
@@ -73,9 +71,9 @@ export default function ContacteSecretaria() {
           <div style={{ fontFamily: 'Open Sans', fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', marginBottom: '24px' }}>
             <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Inici</Link>
             <span> / </span>
-            <Link href="/admissio-i-secretaria" style={{ color: 'white', textDecoration: 'none' }}>Admissió i secretaria</Link>
+            <Link href="/admissio" style={{ color: 'white', textDecoration: 'none' }}>Admissió i secretaria</Link>
             <span> / </span>
-            <Link href="/admissio-i-secretaria/faq-i-tramits" style={{ color: 'white', textDecoration: 'none' }}>FAQ i tràmits</Link>
+            <Link href="/admissio/faq" style={{ color: 'white', textDecoration: 'none' }}>FAQ i tràmits</Link>
             <span> / </span>
             <span>Contacte secretaria</span>
           </div>
@@ -389,10 +387,10 @@ export default function ContacteSecretaria() {
               Consulta les nostres preguntes freqüents o els tràmits disponibles online
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/admissio-i-secretaria/faq-i-tramits/preguntes-frequents" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
+              <Link href="/admissio/faq/preguntes" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block', transition: 'all 0.3s ease' }}>
                 Preguntes freqüents
               </Link>
-              <Link href="/admissio-i-secretaria/faq-i-tramits/tramits-online" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block', transition: 'all 0.3s ease' }}>
+              <Link href="/admissio/faq/tramits" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block', transition: 'all 0.3s ease' }}>
                 Tràmits online
               </Link>
             </div>
@@ -400,7 +398,7 @@ export default function ContacteSecretaria() {
         </div>
       </section>
 
-      <Footer />
+     
     </>
   );
 }

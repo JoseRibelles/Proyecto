@@ -16,9 +16,7 @@ export default function MenjadorAcollida() {
   };
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones}/>
-      <Header site={defaultSite}/>
-      <Nav/>
+     
 
       {/* Hero */}
       <section style={{
@@ -90,7 +88,7 @@ export default function MenjadorAcollida() {
           ))}
         </div>
       </section>
-      <Footer/>
+      
     </>
   );
 }

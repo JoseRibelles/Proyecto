@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_modules_lista_objetivos",
+  "info": {
+    "displayName": "Lista Objetivos"
+  },
+  "options": {},
+  "attributes": {
+    "tituloSeccion": {
+      "type": "string"
+    },
+    "columas": {
+      "type": "integer",
+      "default": 2
+    },
+    "bloques": {
+      "type": "component",
+      "component": "elements.objetivo-block",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

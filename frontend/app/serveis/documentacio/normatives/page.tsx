@@ -23,10 +23,7 @@ export default function NormativesCentre() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
-
+      
       {/* Hero */}
       <section style={{
         width: '100%',
@@ -77,7 +74,7 @@ export default function NormativesCentre() {
         </div>
       </section>
 
-      <Footer/>
+     
     </>
   );
 }

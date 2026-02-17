@@ -17,9 +17,7 @@ export default function QuiSom() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       <section className="page-hero">
         <div className="page-hero-overlay">
@@ -142,7 +140,6 @@ export default function QuiSom() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }

@@ -17,9 +17,7 @@ export default function Competencies() {
 
   return (
     <>
-      <TopBar text={defaultSite.topBarText} phone={defaultSite.topBarPhones} />
-      <Header site={defaultSite} />
-      <Nav />
+      
 
       {/* Hero */}
       <section style={{
@@ -243,10 +241,10 @@ export default function Competencies() {
               Coneix la nostra metodologia i atenció a la diversitat
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/projecte-educatiu/metodologia" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block' }}>
+              <Link href="/lescola/projecte-educatiu/metodologia" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'white', color: '#6D7E4F', display: 'inline-block' }}>
                 Metodologia pedagògica
               </Link>
-              <Link href="/projecte-educatiu/inclusio" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding:  '14px 32px', borderRadius: '8px', textDecoration: 'none', background:  'transparent', color: 'white', border: '2px solid white', display: 'inline-block' }}>
+              <Link href="/lescola/projecte-educatiu/inclusio" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding:  '14px 32px', borderRadius: '8px', textDecoration: 'none', background:  'transparent', color: 'white', border: '2px solid white', display: 'inline-block' }}>
                 Inclusió i diversitat
               </Link>
               <Link href="/contacte/formulari" style={{ fontFamily: 'Montserrat', fontSize: '1rem', fontWeight: 600, padding: '14px 32px', borderRadius: '8px', textDecoration: 'none', background: 'transparent', color: 'white', border: '2px solid white', display: 'inline-block' }}>
@@ -257,7 +255,6 @@ export default function Competencies() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }
