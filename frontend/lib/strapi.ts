@@ -1,6 +1,5 @@
 // Helper centralizado para llamadas a Strapi.
-export const STRAPI_BASE = process.env.NEXT_PUBLIC_STRAPI_URL ?? 'http://localhost:1337';
-
+export const STRAPI_BASE = process.env.NEXT_PUBLIC_STRAPI_URL ?? 'https://lluismillet-strapi.onrender.com';
 export async function getStrapiData(path: string, opts: RequestInit = {}) {
   if (!path.startsWith('/')) path = '/' + path;
   const url = STRAPI_BASE + path;
