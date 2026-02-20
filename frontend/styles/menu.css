@@ -290,15 +290,7 @@
   right:0;
 }
 
-/* Submenús anidados: abrir hacia la IZQUIERDA en lugar de derecha */
-.nav-list > .nav-item:nth-last-child(-n+2) .dropdown-wrap[data-level="1"],
-.nav-list > .nav-item:nth-last-child(-n+2) .dropdown-wrap[data-level="2"],
-.nav-list > .nav-item:nth-last-child(-n+2) .dropdown-wrap[data-level="3"] {
-  left: auto;
-  right:100%;
-  margin-left:0;
-  margin-right:4px;
-}
+
 
 /* ===== FIN DEL FIX ===== */
 
