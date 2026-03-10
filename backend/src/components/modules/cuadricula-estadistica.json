@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_modules_cuadricula_estadisticas",
+  "info": {
+    "displayName": "Cuadricula Estadistica"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "columnas": {
+      "type": "enumeration",
+      "enum": [
+        "col2",
+        "col3",
+        "col4"
+      ]
+    }
+  },
+  "config": {}
+}

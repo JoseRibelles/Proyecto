@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_modules_acordeons",
+  "info": {
+    "displayName": "Acordeon"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "elementos": {
+      "type": "component",
+      "component": "elements.elemento-acordeon",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

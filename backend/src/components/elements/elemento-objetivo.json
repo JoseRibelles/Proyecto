@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_elements_elemento_objetivos",
+  "info": {
+    "displayName": "Elemento Objetivo"
+  },
+  "options": {},
+  "attributes": {
+    "icono": {
+      "type": "string"
+    },
+    "colorIcono": {
+      "type": "enumeration",
+      "enum": [
+        "rojo",
+        "verde",
+        "azul",
+        "naranja",
+        "morado",
+        "amarillo"
+      ]
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

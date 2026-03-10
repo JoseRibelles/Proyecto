@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_modules_seccion_textos",
+  "info": {
+    "displayName": "Sección Texto"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "contenido": {
+      "type": "richtext"
+    },
+    "alineacion": {
+      "type": "enumeration",
+      "enum": [
+        "izquierda ",
+        "centro",
+        "derecha"
+      ]
+    },
+    "colorFondo": {
+      "type": "enumeration",
+      "enum": [
+        "blanco",
+        "gris",
+        "verde"
+      ]
+    }
+  },
+  "config": {}
+}

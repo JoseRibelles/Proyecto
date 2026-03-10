@@ -29,8 +29,19 @@
         "modules.tarjetas-grid",
         "modules.lista-objetivos",
         "modules.herp-section",
-        "modules.cta-section"
+        "modules.cta-section",
+        "modules.video-incrustado",
+        "modules.seccion-texto",
+        "modules.pestana-contenido",
+        "modules.linea-tiempo",
+        "modules.imagen-texto",
+        "modules.cuadricula-estadistica",
+        "modules.caja-destacada",
+        "modules.acordeon"
       ]
+    },
+    "rutaCompleta": {
+      "type": "string"
     }
   }
 }

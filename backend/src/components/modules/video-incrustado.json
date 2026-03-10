@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_modules_video_incrustados",
+  "info": {
+    "displayName": "Video Incrustado"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "urlVideo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

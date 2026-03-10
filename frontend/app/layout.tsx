@@ -17,41 +17,62 @@ import '../styles/footer.css';
 import '../styles/legal-pages.css';
 import '../styles/content-pages.css';
 
+const fallbackSite = {
+  topBarText: 'Carrer Lluís Millet, 22, 08924',
+  topBarPhones: '933 913 351 | a8076947@xtec.cat',
+  title: 'Col·legi Lluís Millet',
+  rightHeaderText: 'UNA NOVA MIRADA PEDAGÒGICA',
+  logoUrl: 'https://via.placeholder.com/150x80/4CAF50/ffffff?text=LOGO',
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [site, setSite] = useState<any>(null);
+  const [site, setSite] = useState<any>(fallbackSite);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    (async () => {
+    let mounted = true;
+    
+    const fetchSiteSettings = async () => {
       try {
+        console.log('🔄 Cargando configuración del sitio...');
+        
         const json = await getStrapiData('/api/site-setting?populate=*');
+        
+        console.log('✅ Respuesta de Strapi:', json);
+        
         const data = json?.data ?? null;
         const attrs = data?.attributes ?? data ?? null;
         
-        if (attrs?.logo) {
-          attrs.logoUrl = strapiMedia(attrs.logo);
+        if (attrs && mounted) {
+          if (attrs.logo) {
+            attrs.logoUrl = strapiMedia(attrs.logo);
+          }
+          
+          console.log('✅ Configuración cargada:', attrs);
+          setSite(attrs);
+        } else if (mounted) {
+          console.warn('⚠️ No se encontró configuración, usando fallback');
+          setSite(fallbackSite);
         }
+      } catch (error: any) {
+        console.error('❌ Error cargando configuración del sitio:', error);
+        console.error('Detalles:', error.message);
         
-        setSite(attrs || {
-          topBarText: 'Carrer Lluís Millet, 22, 08924',
-          topBarPhones: '933 913 351 | a8076947@xtec.cat',
-          title: 'Col·legi Lluís Millet',
-          rightHeaderText: 'UNA NOVA MIRADA PEDAGÒGICA',
-          logoUrl: 'https://via.placeholder.com/150x80/4CAF50/ffffff?text=LOGO',
-        });
-      } catch (e) {
-        console.error('Error fetching site settings:', e);
-        setSite({
-          topBarText: 'Carrer Lluís Millet, 22, 08924',
-          topBarPhones: '933 913 351 | a8076947@xtec.cat',
-          title: 'Col·legi Lluís Millet',
-          rightHeaderText: 'UNA NOVA MIRADA PEDAGÒGICA',
-          logoUrl: 'https://via.placeholder.com/150x80/4CAF50/ffffff?text=LOGO',
-        });
+        if (mounted) {
+          setSite(fallbackSite);
+        }
       } finally {
-        setLoading(false);
+        if (mounted) {
+          setLoading(false);
+        }
       }
-    })();
+    };
+
+    fetchSiteSettings();
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   return (

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_modules_caja_destacadas",
+  "info": {
+    "displayName": "Caja Destacada"
+  },
+  "options": {},
+  "attributes": {
+    "Icono": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "disposicion": {
+      "type": "enumeration",
+      "enum": [
+        "icono-izquierda",
+        "icono-arriba"
+      ]
+    },
+    "estiloFondo": {
+      "type": "enumeration",
+      "enum": [
+        "solido",
+        "gradiente"
+      ]
+    },
+    "TemaColor": {
+      "type": "enumeration",
+      "enum": [
+        "verde",
+        "azul",
+        "naranja"
+      ]
+    }
+  },
+  "config": {}
+}

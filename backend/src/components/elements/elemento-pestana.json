@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_elemento_pestanas",
+  "info": {
+    "displayName": "Elemento Pestana"
+  },
+  "options": {},
+  "attributes": {
+    "tituloPestana": {
+      "type": "string"
+    },
+    "icono": {
+      "type": "string"
+    },
+    "contenido": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

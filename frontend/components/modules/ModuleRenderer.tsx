@@ -1,76 +1,89 @@
-'use client';
-import HeroModule from '../modules/HeroModule';
-import CardsGridModule from '../modules/CardsGridModule';
-import CTAModule from '../modules/CTAModule';
+import HeroSection from './HeroSection';
+import TarjetasGrid from './TarjetasGrid';
+import CtaSection from './CtaSection';
+import SeccionTexto from './SeccionTexto';
+import CajaDestacada from './CajaDestacada';
+import ImagenTexto from './ImagenTexto';
+import LineaTiempo from './LineaTiempo';
+import Acordeon from './Acordeon';
+import CuadriculaEstadisticas from './CuadriculaEstadisticas';
+import Galeria from './Galeria';
+import VideoIncrustado from './VideoIncrustado';
+import PestanasContenido from './PestanasContenido';
+import MapaUbicacion from './MapaUbicacion';
+import SeccionBienvenida from './SeccionBienvenida';
+import HeroAvanzado from './HeroAvanzado';
+import ListaObjetivos from './ListaObjetivos';
 
-interface ModuleRendererProps {
-  modules: any[];
-}
-
-export default function ModuleRenderer({ modules }: ModuleRendererProps) {
-  console.log('=== MÓDULOS RECIBIDOS ===', modules);
-
+export default function ModuleRenderer({ modules }: { modules: any[] }) {
   if (!modules || modules.length === 0) {
-    return (
-      <div style={{ padding: '40px', textAlign: 'center', fontFamily: 'Open Sans', color: '#999' }}>
-        No hi ha mòduls per mostrar
-      </div>
-    );
+    return null;
   }
 
   return (
-    <div>
+    <>
       {modules.map((module, index) => {
         const componentType = module.__component;
-        
-        console.log(`\n=== MÓDULO ${index} ===`);
-        console.log('Tipo:', componentType);
-        console.log('Datos completos:', module);
-        console.log('Keys:', Object.keys(module));
 
-        try {
-          if (componentType === 'modules.hero-section' || componentType === 'modules.herp-section') {
-            console.log('Renderizando HeroModule con:', module);
-            return (
-              <div key={`hero-${index}`}>
-                <HeroModule data={module} />
-              </div>
-            );
-          }
+        switch (componentType) {
+          case 'modules.hero-section':
+            return <HeroSection key={index} data={module} />;
+          
+    
 
-          if (componentType === 'modules.tarjetas-grid') {
-            console.log('Renderizando CardsGridModule con:', module);
-            return (
-              <div key={`cards-${index}`}>
-                <CardsGridModule data={module} />
-              </div>
-            );
-          }
+case 'modules.herp-section':  // ← Typo temporal hasta que lo arregles en Strapi
+  return <HeroSection key={index} data={module} />;
 
-          if (componentType === 'modules.cta-section') {
-            console.log('Renderizando CTAModule con:', module);
-            return (
-              <div key={`cta-${index}`}>
-                <CTAModule data={module} />
-              </div>
-            );
-          }
+          case 'modules.tarjetas-grid':
+            return <TarjetasGrid key={index} data={module} />;
+          
+          case 'modules.cta-section':
+            return <CtaSection key={index} data={module} />;
+          
+          case 'modules.seccion-texto':
+            return <SeccionTexto key={index} data={module} />;
+          
+          case 'modules.caja-destacada':
+            return <CajaDestacada key={index} data={module} />;
+          
+          case 'modules.imagen-texto':
+            return <ImagenTexto key={index} data={module} />;
+          
+          case 'modules.linea-tiempo':
+            return <LineaTiempo key={index} data={module} />;
+          
+          case 'modules.acordeon':
+            return <Acordeon key={index} data={module} />;
+          
+          case 'modules.cuadricula-estadisticas':
+            return <CuadriculaEstadisticas key={index} data={module} />;
+          
+          case 'modules.galeria':
+            return <Galeria key={index} data={module} />;
+          
+          case 'modules.video-incrustado':
+            return <VideoIncrustado key={index} data={module} />;
+          
+          case 'modules.pestanas-contenido':
+            return <PestanasContenido key={index} data={module} />;
+          
+          case 'modules.mapa-ubicacion':
+            return <MapaUbicacion key={index} data={module} />;
+          
+          case 'modules.seccion-bienvenida':
+            return <SeccionBienvenida key={index} data={module} />;
+          
+          case 'modules.hero-avanzado':
+            return <HeroAvanzado key={index} data={module} />;
+          
+          case 'modules.lista-objetivos':
+          return <ListaObjetivos key={index} data={module} />;
 
-          console.warn(`Módulo no reconocido: ${componentType}`);
-          return (
-            <div key={`unknown-${index}`} style={{ padding: '20px', background: '#fff3cd', margin: '10px' }}>
-              ⚠️ Componente no reconocido: <code>{componentType}</code>
-            </div>
-          );
-        } catch (error) {
-          console.error(`Error renderizando módulo ${index}:`, error);
-          return (
-            <div key={`error-${index}`} style={{ padding: '20px', background: '#f8d7da', margin: '10px', color: '#721c24' }}>
-              ❌ Error renderizando: {componentType}
-            </div>
-          );
+          default:
+            console.warn(`Módulo desconocido: ${componentType}`);
+            return null;
         }
       })}
-    </div>
+    </>
   );
 }

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_modules_imagen_textos",
+  "info": {
+    "displayName": "Imagen+Texto"
+  },
+  "options": {},
+  "attributes": {
+    "Imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "PosicionImagen": {
+      "type": "enumeration",
+      "enum": [
+        "izquierda",
+        "derecha"
+      ]
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "Contenido": {
+      "type": "richtext"
+    },
+    "TextoBoton": {
+      "type": "string"
+    },
+    "EnlaceBoton": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

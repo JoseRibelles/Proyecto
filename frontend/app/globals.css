@@ -327,3 +327,23 @@ html {
     line-height: 1.6 ! important;
   }
 }
+
+/* Estilos para contenido rich text */
+.rich-text strong,
+.rich-text b {
+  font-weight: 700;
+  color: #333;
+}
+
+.rich-text em,
+.rich-text i {
+  font-style: italic;
+}
+
+.rich-text u {
+  text-decoration: underline;
+}
+
+.rich-text p {
+  margin: 0;
+}

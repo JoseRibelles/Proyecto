@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_elements_boton_destacados",
+  "info": {
+    "displayName": "Boton Destacado"
+  },
+  "options": {},
+  "attributes": {
+    "icono": {
+      "type": "string"
+    },
+    "textoPrincipal": {
+      "type": "string"
+    },
+    "textoSecundario": {
+      "type": "string"
+    },
+    "enlace": {
+      "type": "string"
+    },
+    "estilo": {
+      "type": "enumeration",
+      "enum": [
+        "primario",
+        "secundario"
+      ]
+    }
+  },
+  "config": {}
+}

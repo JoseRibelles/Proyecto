@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_modules_linea_tiempos",
+  "info": {
+    "displayName": "LineaTiempo"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "pasos": {
+      "type": "component",
+      "component": "elements.paso-t-imeline",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

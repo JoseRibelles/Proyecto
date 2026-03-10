@@ -514,9 +514,18 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'modules.lista-objetivos',
         'modules.herp-section',
         'modules.cta-section',
+        'modules.video-incrustado',
+        'modules.seccion-texto',
+        'modules.pestana-contenido',
+        'modules.linea-tiempo',
+        'modules.imagen-texto',
+        'modules.cuadricula-estadistica',
+        'modules.caja-destacada',
+        'modules.acordeon',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
+    rutaCompleta: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'titulo'>;
     titulo: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_modules_pestana_contenidos",
+  "info": {
+    "displayName": "Pestana Contenido"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "pestanas": {
+      "type": "component",
+      "component": "elements.elemento-pestana",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

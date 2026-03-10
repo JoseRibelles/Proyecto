@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_elemento_estadisticas",
+  "info": {
+    "displayName": "Elemento Estadistica"
+  },
+  "options": {},
+  "attributes": {
+    "numero": {
+      "type": "string"
+    },
+    "etiqueta": {
+      "type": "string"
+    },
+    "icono": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

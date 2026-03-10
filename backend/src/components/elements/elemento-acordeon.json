@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_elemento_acordeons",
+  "info": {
+    "displayName": "Elemento Acordeon"
+  },
+  "options": {},
+  "attributes": {
+    "pregunta": {
+      "type": "string"
+    },
+    "respuesta": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

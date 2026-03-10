@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_modules_hero_avanzados",
+  "info": {
+    "displayName": "Hero Avanzado"
+  },
+  "options": {},
+  "attributes": {
+    "mostrarBadge": {
+      "type": "boolean",
+      "default": false
+    },
+    "iconoBadge": {
+      "type": "string"
+    },
+    "textoBadge": {
+      "type": "string"
+    },
+    "subtextoBadge": {
+      "type": "string"
+    },
+    "tituloLinea1": {
+      "type": "string"
+    },
+    "TituloDestacado": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "imagenFondo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "botones": {
+      "type": "component",
+      "component": "elements.boton-destacado",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

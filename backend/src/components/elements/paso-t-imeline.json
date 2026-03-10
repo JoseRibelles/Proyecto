@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_paso_t_imelines",
+  "info": {
+    "displayName": "PasoTImeline"
+  },
+  "options": {},
+  "attributes": {
+    "numeroPaso": {
+      "type": "integer"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

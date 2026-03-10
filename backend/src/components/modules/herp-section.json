@@ -33,6 +33,10 @@
     "colorFondo": {
       "type": "string",
       "default": "#6D7E4F"
+    },
+    "mostrarBreadcrumbs": {
+      "type": "boolean",
+      "default": true
     }
   },
   "config": {}
