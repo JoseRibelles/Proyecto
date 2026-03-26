@@ -119,6 +119,7 @@ export interface ModulesCajaDestacada extends Struct.ComponentSchema {
     displayName: 'Caja Destacada';
   };
   attributes: {
+    colorFondo: Schema.Attribute.String;
     descripcion: Schema.Attribute.RichText;
     disposicion: Schema.Attribute.Enumeration<
       ['icono-izquierda', 'icono-arriba']
