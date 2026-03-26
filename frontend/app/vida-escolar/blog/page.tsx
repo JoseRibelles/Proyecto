@@ -59,19 +59,19 @@ export default function BlogEscolar() {
       <section style={{ width: '100%', padding: '40px 0', background: '#f9f9f9' }}>
         <div style={{ maxWidth: '1050px', margin: '0 auto', display: 'grid', gap: '32px', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           {[{
-            href: '/vida-escolar/blog/infantil',
+            href: '/vida-escolar/blog/blog-infantil',
             title: 'Infantil',
             img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
             desc: 'Descobreix els primers projectes, els jocs i activitats dels més petits.'
           },
             {
-              href: '/vida-escolar/blog/primaria',
+              href: '/vida-escolar/blog/blog-primaria',
               title: 'Primària',
               img: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80',
               desc: 'Segueix el dia a dia d’un alumnat curiós, actiu i protagonista del seu aprenentatge.'
             },
             {
-              href: '/vida-escolar/blog/secundaria',
+              href: '/vida-escolar/blog/blog-secundaria',
               title: 'Secundària',
               img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
               desc: 'Treballem per a l’autonomia, la creativitat i la preparació per nous reptes.'
