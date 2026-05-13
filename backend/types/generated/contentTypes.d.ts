@@ -522,6 +522,12 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'modules.cuadricula-estadistica',
         'modules.caja-destacada',
         'modules.acordeon',
+        'modules.cta-doble',
+        'modules.como-llegar',
+        'modules.grid-imagen-cards',
+        'modules.hero-avanzado',
+        'modules.hero-home-avanzado',
+        'modules.grid-imagen-cards-simple',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;

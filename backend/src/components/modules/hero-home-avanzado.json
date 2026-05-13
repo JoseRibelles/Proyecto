@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_modules_hero_home_avanzados",
+  "info": {
+    "displayName": "HeroHomeAvanzado"
+  },
+  "options": {},
+  "attributes": {
+    "imagenFondo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "badgeTexto": {
+      "type": "string"
+    },
+    "badgeSubtexto": {
+      "type": "string"
+    },
+    "badgeIcono": {
+      "type": "string"
+    },
+    "tituloLinea1": {
+      "type": "string"
+    },
+    "tituloDestacado": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "botones": {
+      "type": "component",
+      "component": "elements.boton",
+      "repeatable": true
+    },
+    "features": {
+      "type": "component",
+      "component": "elements.icon-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

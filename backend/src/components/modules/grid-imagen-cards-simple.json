@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_modules_grid_imagen_cards_simples",
+  "info": {
+    "displayName": "GridImagenCardsSimple"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "tarjetas": {
+      "type": "component",
+      "component": "elements.imagen-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

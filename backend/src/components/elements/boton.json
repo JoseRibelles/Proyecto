@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_botons",
+  "info": {
+    "displayName": "boton"
+  },
+  "options": {},
+  "attributes": {
+    "texto": {
+      "type": "string",
+      "required": true
+    },
+    "enlace": {
+      "type": "string"
+    },
+    "estilo": {
+      "type": "enumeration",
+      "default": "primario",
+      "enum": [
+        "primario",
+        "secundario",
+        "outline"
+      ]
+    },
+    "icono": {
+      "type": "string"
+    },
+    "subtexto": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

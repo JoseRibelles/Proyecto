@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import { getStrapiData } from '@/lib/strapi';
 import ModuleRenderer from '../../components/modules/ModuleRenderer';
@@ -7,10 +6,7 @@ import { usePathname } from 'next/navigation';
 
 export default function DinamicPage() {
   const pathname = usePathname();
-  // pathname será algo como "/etapes/infantil/objectius-etapa"
-  // Quitamos la primera barra
   const rutaCompleta = pathname.startsWith('/') ? pathname.substring(1) : pathname;
-  
   const [pageData, setPageData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -20,81 +16,58 @@ export default function DinamicPage() {
 
     (async () => {
       try {
-        // Buscar por rutaCompleta
+        const populate =
+          `&populate[modulos][on][modules.grid-imagen-cards][populate][cards][populate][imagen]=true` +
+          `&populate[modulos][on][modules.hero-home-avanzado][populate]=*` +
+          `&populate[modulos][on][modules.imagen-texto][populate]=*` +
+          `&populate[modulos][on][modules.texto-imagen][populate]=*` +
+          `&populate[modulos][on][modules.cta-section][populate]=*` +
+          `&populate[modulos][on][modules.hero-avanzado][populate]=*` +
+          `&populate[modulos][on][modules.tarjetas-grid][populate]=*` +
+          `&populate[modulos][on][modules.acordeon][populate]=*` +
+          `&populate[modulos][on][modules.seccion-texto][populate]=*` +
+          `&populate[modulos][on][modules.linea-tiempo][populate]=*` +
+          `&populate[modulos][on][modules.cta-doble][populate]=*` +
+          `&populate[modulos][on][modules.video-incrustado][populate]=*` +
+          `&populate[modulos][on][modules.caja-destacada][populate]=*` +
+          `&populate[modulos][on][modules.lista-objetivos][populate]=*` +
+          `&populate[modulos][on][modules.pestana-contenido][populate]=*` +
+          `&populate[modulos][on][modules.cuadricula-estadistica][populate]=*` +
+          `&populate[modulos][on][modules.como-llegar][populate]=*` +
+          `&populate[modulos][on][modules.grid-imagen-cards-simple][populate]=*` +
+          `&populate[modulos][on][modules.herp-section][populate]=*`;
+
         const response = await getStrapiData(
-          `/api/pages?filters[rutaCompleta][$eq]=${rutaCompleta}&populate[modulos][populate]=*`
+          `/api/pages?filters[rutaCompleta][$eq]=${rutaCompleta}${populate}`
         );
-        
         let page = response?.data?.[0];
-        
-        // Si no se encuentra por rutaCompleta, buscar por slug simple (compatibilidad)
+
         if (!page) {
-          const slug = rutaCompleta.split('/').pop(); // Obtener la última parte
+          const slug = rutaCompleta.split('/').pop();
           const response2 = await getStrapiData(
-            `/api/pages?filters[slug][$eq]=${slug}&populate[modulos][populate]=*`
+            `/api/pages?filters[slug][$eq]=${slug}${populate}`
           );
           page = response2?.data?.[0];
         }
-        
+
         if (!page) {
           setError('Página no encontrada.');
           return;
         }
-        
+
         setPageData(page);
-      } catch (error: any) {
-        console.error('Error cargando página:', error);
-        setError(`Error: ${error.message}`);
+      } catch (err: any) {
+        console.error('[DinamicPage] Error:', err);
+        setError(`Error: ${err.message}`);
       } finally {
         setLoading(false);
       }
     })();
   }, [rutaCompleta]);
 
-  if (loading) {
-    return (
-      <div style={{ 
-        padding: '40px', 
-        textAlign: 'center', 
-        fontFamily: 'Open Sans', 
-        fontSize: '1.2rem', 
-        color: '#6D7E4F' 
-      }}>
-        Carregant...
-      </div>
-    );
-  }
+  if (loading) return <div style={{ padding: '40px', textAlign: 'center' }}>Carregant...</div>;
+  if (error) return <div style={{ padding: '40px', textAlign: 'center', color: '#d32f2f' }}>{error}</div>;
+  if (!pageData) return <div style={{ padding: '40px', textAlign: 'center' }}>Pàgina no trobada</div>;
 
-  if (error) {
-    return (
-      <div style={{ 
-        padding: '40px', 
-        textAlign: 'center', 
-        fontFamily: 'Open Sans',
-        color: '#d32f2f'
-      }}>
-        <h2>Error</h2>
-        <p>{error}</p>
-      </div>
-    );
-  }
-
-  if (!pageData) {
-    return (
-      <div style={{ 
-        padding: '40px', 
-        textAlign: 'center', 
-        fontFamily: 'Open Sans' 
-      }}>
-        Pàgina no trobada
-      </div>
-    );
-  }
-
-  console.log('📦 DATOS COMPLETOS:', pageData);
-pageData.modulos?.forEach((modulo: any, index: number) => {
-  console.log(`📦 Módulo ${index}:`, modulo.__component, modulo);
-});
-
-return <ModuleRenderer modules={pageData.modulos || []} />;
+  return <ModuleRenderer modules={pageData.modulos || []} />;
 }

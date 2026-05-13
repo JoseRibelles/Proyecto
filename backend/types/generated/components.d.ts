@@ -1,5 +1,22 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ElementsBoton extends Struct.ComponentSchema {
+  collectionName: 'components_elements_botons';
+  info: {
+    displayName: 'boton';
+  };
+  attributes: {
+    enlace: Schema.Attribute.String;
+    estilo: Schema.Attribute.Enumeration<
+      ['primario', 'secundario', 'outline']
+    > &
+      Schema.Attribute.DefaultTo<'primario'>;
+    icono: Schema.Attribute.String;
+    subtexto: Schema.Attribute.String;
+    texto: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsBotonDestacado extends Struct.ComponentSchema {
   collectionName: 'components_elements_boton_destacados';
   info: {
@@ -22,6 +39,21 @@ export interface ElementsCardItem extends Struct.ComponentSchema {
   attributes: {
     descripcion: Schema.Attribute.Text;
     enlace: Schema.Attribute.String;
+    icono: Schema.Attribute.String;
+    titulo: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsCtaBox extends Struct.ComponentSchema {
+  collectionName: 'components_elements_cta_boxes';
+  info: {
+    displayName: 'CtaBox';
+  };
+  attributes: {
+    boton: Schema.Attribute.Component<'elements.boton', true>;
+    descripcion: Schema.Attribute.Text;
+    fondo: Schema.Attribute.Enumeration<['verde', 'blanco']> &
+      Schema.Attribute.DefaultTo<'verde'>;
     icono: Schema.Attribute.String;
     titulo: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -74,6 +106,31 @@ export interface ElementsElementoPestana extends Struct.ComponentSchema {
     contenido: Schema.Attribute.RichText;
     icono: Schema.Attribute.String;
     tituloPestana: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsIconText extends Struct.ComponentSchema {
+  collectionName: 'components_elements_icon_texts';
+  info: {
+    displayName: 'IconText';
+  };
+  attributes: {
+    icono: Schema.Attribute.String;
+    texto: Schema.Attribute.String;
+    titulo: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsImagenCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_imagen_cards';
+  info: {
+    displayName: 'ImagenCard';
+  };
+  attributes: {
+    descripcion: Schema.Attribute.String;
+    enlace: Schema.Attribute.String;
+    imagen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    titulo: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -131,6 +188,32 @@ export interface ModulesCajaDestacada extends Struct.ComponentSchema {
   };
 }
 
+export interface ModulesComoLlegar extends Struct.ComponentSchema {
+  collectionName: 'components_modules_como_llegars';
+  info: {
+    displayName: 'ComoLlegar';
+  };
+  attributes: {
+    direccion: Schema.Attribute.String;
+    itemsInfo: Schema.Attribute.Component<'elements.icon-text', true>;
+    latitud: Schema.Attribute.String;
+    longitud: Schema.Attribute.String;
+    subtitulo: Schema.Attribute.String;
+    titulo: Schema.Attribute.String;
+  };
+}
+
+export interface ModulesCtaDoble extends Struct.ComponentSchema {
+  collectionName: 'components_modules_cta_dobles';
+  info: {
+    displayName: 'CtaDoble';
+  };
+  attributes: {
+    derecha: Schema.Attribute.Component<'elements.cta-box', false>;
+    izquierda: Schema.Attribute.Component<'elements.cta-box', false>;
+  };
+}
+
 export interface ModulesCtaSection extends Struct.ComponentSchema {
   collectionName: 'components_modules_cta_sections';
   info: {
@@ -160,6 +243,28 @@ export interface ModulesCuadriculaEstadistica extends Struct.ComponentSchema {
   };
 }
 
+export interface ModulesGridImagenCards extends Struct.ComponentSchema {
+  collectionName: 'components_modules_grid_imagen_cards';
+  info: {
+    displayName: 'GridImagenCards';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.imagen-card', true>;
+    titulo: Schema.Attribute.String;
+  };
+}
+
+export interface ModulesGridImagenCardsSimple extends Struct.ComponentSchema {
+  collectionName: 'components_modules_grid_imagen_cards_simples';
+  info: {
+    displayName: 'GridImagenCardsSimple';
+  };
+  attributes: {
+    tarjetas: Schema.Attribute.Component<'elements.imagen-card', true>;
+    titulo: Schema.Attribute.String;
+  };
+}
+
 export interface ModulesHeroAvanzado extends Struct.ComponentSchema {
   collectionName: 'components_modules_hero_avanzados';
   info: {
@@ -174,6 +279,26 @@ export interface ModulesHeroAvanzado extends Struct.ComponentSchema {
     subtextoBadge: Schema.Attribute.String;
     textoBadge: Schema.Attribute.String;
     TituloDestacado: Schema.Attribute.String;
+    tituloLinea1: Schema.Attribute.String;
+  };
+}
+
+export interface ModulesHeroHomeAvanzado extends Struct.ComponentSchema {
+  collectionName: 'components_modules_hero_home_avanzados';
+  info: {
+    displayName: 'HeroHomeAvanzado';
+  };
+  attributes: {
+    badgeIcono: Schema.Attribute.String;
+    badgeSubtexto: Schema.Attribute.String;
+    badgeTexto: Schema.Attribute.String;
+    botones: Schema.Attribute.Component<'elements.boton', true>;
+    descripcion: Schema.Attribute.Blocks;
+    features: Schema.Attribute.Component<'elements.icon-text', true>;
+    imagenFondo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    tituloDestacado: Schema.Attribute.String;
     tituloLinea1: Schema.Attribute.String;
   };
 }
@@ -304,19 +429,28 @@ export interface ModulesVideoIncrustado extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'elements.boton': ElementsBoton;
       'elements.boton-destacado': ElementsBotonDestacado;
       'elements.card-item': ElementsCardItem;
+      'elements.cta-box': ElementsCtaBox;
       'elements.elemento-acordeon': ElementsElementoAcordeon;
       'elements.elemento-estadistica': ElementsElementoEstadistica;
       'elements.elemento-objetivo': ElementsElementoObjetivo;
       'elements.elemento-pestana': ElementsElementoPestana;
+      'elements.icon-text': ElementsIconText;
+      'elements.imagen-card': ElementsImagenCard;
       'elements.objetivo-block': ElementsObjetivoBlock;
       'elements.paso-t-imeline': ElementsPasoTImeline;
       'modules.acordeon': ModulesAcordeon;
       'modules.caja-destacada': ModulesCajaDestacada;
+      'modules.como-llegar': ModulesComoLlegar;
+      'modules.cta-doble': ModulesCtaDoble;
       'modules.cta-section': ModulesCtaSection;
       'modules.cuadricula-estadistica': ModulesCuadriculaEstadistica;
+      'modules.grid-imagen-cards': ModulesGridImagenCards;
+      'modules.grid-imagen-cards-simple': ModulesGridImagenCardsSimple;
       'modules.hero-avanzado': ModulesHeroAvanzado;
+      'modules.hero-home-avanzado': ModulesHeroHomeAvanzado;
       'modules.herp-section': ModulesHerpSection;
       'modules.imagen-texto': ModulesImagenTexto;
       'modules.linea-tiempo': ModulesLineaTiempo;

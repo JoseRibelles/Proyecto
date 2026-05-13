@@ -1,29 +1,14 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import TopBar from '../../../../components/TopBar';
-import Header from '../../../../components/Header';
-import Nav from '../../../../components/Nav';
-import Footer from '../../../../components/Footer';
 
 export default function NormativesCentre() {
-  const defaultSite = {
-    topBarText: 'Carrer Lluís Millet, 22, 08924',
-    topBarPhones: '933 913 351 | a8076947@xtec.cat',
-    title: 'Col·legi Lluís Millet',
-    rightHeaderText: 'UNA NOVA MIRADA PEDAGÒGICA',
-    logoUrl: 'https://via.placeholder.com/150x60/4CAF50/ffffff?text=LOGO+ESCOLA'
-  };
-
   const docs = [
-    { name: "Reglament de Règim Intern", url: "https://blocs.xtec.cat/escolalluismillet/files/2014/11/reglament-regim-intern.pdf" },
-    { name: "Normativa d'ús del menjador escolar", url: "https://blocs.xtec.cat/escolalluismillet/files/2014/11/normes-menjador.pdf" },
-    { name: "Protocol d'acollida", url: "https://blocs.xtec.cat/escolalluismillet/files/2014/11/protocol-acollida.pdf" }
+    { name: "Normes d'organització i funcionament", url: "https://agora.xtec.cat/institutescolalluismillet/wp-content/uploads/usu3046/2016/09/NORM-2023-2024.pdf" }
   ];
 
   return (
     <>
-      
       {/* Hero */}
       <section style={{
         width: '100%',
@@ -53,7 +38,7 @@ export default function NormativesCentre() {
         </div>
       </section>
 
-      {/* Introducción + Enlaces */}
+      {/* Documentos */}
       <section style={{ width: '100%', padding: '80px 20px', background: 'white' }}>
         <div style={{ maxWidth: '950px', margin: '0 auto' }}>
           <h2 style={{ fontFamily: 'Montserrat', fontSize: '2rem', fontWeight: 700, color: '#6D7E4F', textAlign: 'center', margin: '0 0 32px' }}>
@@ -69,12 +54,10 @@ export default function NormativesCentre() {
             ))}
           </ul>
           <p style={{ fontSize: '1rem', color: '#888', marginTop: '28px', textAlign: 'center' }}>
-            (*Consulta també protocols i instruccions específiques al blog del centre.)
+            (Consulta també protocols i instruccions específiques al blog del centre.)
           </p>
         </div>
       </section>
-
-     
     </>
   );
 }

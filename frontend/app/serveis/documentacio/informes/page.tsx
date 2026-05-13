@@ -1,29 +1,15 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import TopBar from '../../../../components/TopBar';
-import Header from '../../../../components/Header';
-import Nav from '../../../../components/Nav';
-import Footer from '../../../../components/Footer';
 
 export default function InformesFormularis() {
-  const defaultSite = {
-    topBarText: 'Carrer Lluís Millet, 22, 08924',
-    topBarPhones: '933 913 351 | a8076947@xtec.cat',
-    title: 'Col·legi Lluís Millet',
-    rightHeaderText: 'UNA NOVA MIRADA PEDAGÒGICA',
-    logoUrl: 'https://via.placeholder.com/150x60/4CAF50/ffffff?text=LOGO+ESCOLA'
-  };
-
   const docs = [
-    { name: "Sol·licitud d'informe escolar", url: "https://blocs.xtec.cat/escolalluismillet/files/2014/11/sollicitud-informe.pdf" },
-    { name: "Sol·licitud de beques menjador", url: "https://blocs.xtec.cat/escolalluismillet/files/2014/11/sollicitud-beca-menjador.pdf" }
+    { name: "Informe oferta provisional de places", url: "https://agora.xtec.cat/institutescolalluismillet/wp-content/uploads/usu3046/2015/11/Informe-oferta-provisional-de-places.pdf" },
+    { name: "Informe barem definitiu", url: "https://agora.xtec.cat/institutescolalluismillet/wp-content/uploads/usu3046/2015/11/INFORME_BAREM_DEFINITIU_BAREM-1.pdf" }
   ];
 
   return (
     <>
-      
-
       {/* Hero */}
       <section style={{
         width: '100%',
@@ -53,7 +39,7 @@ export default function InformesFormularis() {
         </div>
       </section>
 
-      {/* Introducción + Enlaces */}
+      {/* Documentos */}
       <section style={{ width: '100%', padding: '80px 20px', background: 'white' }}>
         <div style={{ maxWidth: '950px', margin: '0 auto' }}>
           <h2 style={{ fontFamily: 'Montserrat', fontSize: '2rem', fontWeight: 700, color: '#6D7E4F', textAlign: 'center', margin: '0 0 32px' }}>
@@ -69,12 +55,10 @@ export default function InformesFormularis() {
             ))}
           </ul>
           <p style={{ fontSize: '1rem', color: '#888', marginTop: '28px', textAlign: 'center' }}>
-            (*Consulta la secretaria del centre per altres tràmits i informació.)
+            (Consulta la secretaria del centre per altres tràmits i informació.)
           </p>
         </div>
       </section>
-
-     
     </>
   );
 }

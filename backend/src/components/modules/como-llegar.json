@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_modules_como_llegars",
+  "info": {
+    "displayName": "ComoLlegar"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "subtitulo": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "latitud": {
+      "type": "string"
+    },
+    "longitud": {
+      "type": "string"
+    },
+    "itemsInfo": {
+      "type": "component",
+      "component": "elements.icon-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

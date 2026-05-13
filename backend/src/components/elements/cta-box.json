@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_elements_cta_boxes",
+  "info": {
+    "displayName": "CtaBox"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "icono": {
+      "type": "string"
+    },
+    "fondo": {
+      "type": "enumeration",
+      "default": "verde",
+      "enum": [
+        "verde",
+        "blanco"
+      ]
+    },
+    "boton": {
+      "type": "component",
+      "component": "elements.boton",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

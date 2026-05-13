@@ -39,16 +39,33 @@ export async function getStrapiData(path: string, opts: RequestInit = {}) {
 
 export function strapiMedia(media: any) {
   if (!media) return null;
+  
+  console.log('strapiMedia recibe:', media);
+  
+  // Strapi v4 con populate
   if (media?.data?.attributes?.url) {
     const url = media.data.attributes.url;
     return url.startsWith('http') ? url : STRAPI_BASE + url;
   }
+  
+  // Strapi v4 directo
+  if (media?.attributes?.url) {
+    const url = media.attributes.url;
+    return url.startsWith('http') ? url : STRAPI_BASE + url;
+  }
+  
+  // String directo
   if (typeof media === 'string') {
     return media.startsWith('http') ? media : STRAPI_BASE + media;
   }
+  
+  // Object con url directo
   if (media?.url) {
     return media.url.startsWith('http') ? media.url : STRAPI_BASE + media.url;
   }
+  
+  // Si no encuentra nada, loguear para debugging
+  console.warn('strapiMedia no pudo extraer URL de:', media);
   return null;
 }
 

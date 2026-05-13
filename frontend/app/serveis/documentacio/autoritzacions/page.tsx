@@ -1,30 +1,41 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import TopBar from '../../../../components/TopBar';
-import Header from '../../../../components/Header';
-import Nav from '../../../../components/Nav';
-import Footer from '../../../../components/Footer';
 
 export default function AutoritzacionsPermisos() {
-  const defaultSite = {
-    topBarText: 'Carrer Lluís Millet, 22, 08924',
-    topBarPhones: '933 913 351 | a8076947@xtec.cat',
-    title: 'Col·legi Lluís Millet',
-    rightHeaderText: 'UNA NOVA MIRADA PEDAGÒGICA',
-    logoUrl: 'https://via.placeholder.com/150x60/4CAF50/ffffff?text=LOGO+ESCOLA'
-  };
-
-  // Ejemplo de enlaces reales, adáptalos a tus urls de documentos si los tienes en el repo/drive/web
   const docs = [
-    { name: "Autorització de sortida escolar", url: "https://blocs.xtec.cat/escolalluismillet/files/2014/11/autoritzaci%C3%B3-sortida.pdf" },
-    { name: "Autorització per administració de medicaments", url: "https://blocs.xtec.cat/escolalluismillet/files/2014/11/formulari-medicaments.pdf" },
-    { name: "Permís de recollida d'alumnes per una altra persona", url: "https://blocs.xtec.cat/escolalluismillet/files/2014/11/recollida-alumnes.pdf" },
+    { 
+      name: "Autorització Sortides Santa Coloma", 
+      url: "/downloads/Autorizado-sortides-Santa-Coloma.docx" 
+    },
+    { 
+      name: "Autorització Drets d'imatge", 
+      url: "/downloads/Autorizado-drets-dimatge.docx" 
+    },
+    { 
+      name: "Autorització marxar sols a casa", 
+      url: "/downloads/autoritzacio-per-deixar-marxar-els-alumnes-sols-a-casa.docx" 
+    },
+    { 
+      name: "Autorització marxar amb un germà", 
+      url: "/downloads/E.I-FULL-D-AUTORITZACIO-PER-MARXAR-AMB-UN-GERMA.docx" 
+    },
+    { 
+      name: "Autorització Pati pistes", 
+      url: "/downloads/autorizado-pati-de-pistes.docx" 
+    },
+    { 
+      name: "Autorització SEP", 
+      url: "/downloads/Autorizado-SEP.docx" 
+    },
+    { 
+      name: "Condicions pagament de les sortides", 
+      url: "/downloads/CIRCULAR-CONDICIONS-PAGAMENT-DE-LES-SORTIDES.docx" 
+    },
   ];
 
   return (
     <>
-     
       {/* Hero */}
       <section style={{
         width: '100%',
@@ -54,7 +65,7 @@ export default function AutoritzacionsPermisos() {
         </div>
       </section>
 
-      {/* Introducción + Enlaces */}
+      {/* Documentos */}
       <section style={{ width: '100%', padding: '80px 20px', background: 'white' }}>
         <div style={{ maxWidth: '950px', margin: '0 auto' }}>
           <h2 style={{ fontFamily: 'Montserrat', fontSize: '2rem', fontWeight: 700, color: '#6D7E4F', textAlign: 'center', margin: '0 0 32px' }}>
@@ -63,19 +74,21 @@ export default function AutoritzacionsPermisos() {
           <ul style={{ fontFamily: 'Open Sans', fontSize: '1.10rem', color: '#555', lineHeight: 2, paddingLeft: '1.4rem' }}>
             {docs.map((doc, i) => (
               <li key={i}>
-                <a href={doc.url} target="_blank" rel="noopener noreferrer" style={{ color: '#6D7E4F', textDecoration: 'underline', fontWeight: 600 }}>
+                <a 
+                  href={doc.url} 
+                  download 
+                  style={{ color: '#6D7E4F', textDecoration: 'underline', fontWeight: 600, cursor: 'pointer' }}
+                >
                   {doc.name}
                 </a>
               </li>
             ))}
           </ul>
           <p style={{ fontSize: '1rem', color: '#888', marginTop: '28px', textAlign: 'center' }}>
-            (*Entrega els impresos signats al tutor/a o a la secretaria del centre.)
+            (Entrega els impresos signats al tutor/a o a la secretaria del centre.)
           </p>
         </div>
       </section>
-
-     
     </>
   );
 }
