@@ -68,7 +68,6 @@ Proyecto/
 ## 📄 Documentación
 
 - **Guia d'Estil** - Paleta de colores, tipografía, criterios fotográficos
-- **Prototip Figma** - https://www.figma.com/design/FaVSEXunC2ZpBImKUYDXir/Escola-Llu%C3%ADs-Millet
 - **Document d'explicació Strapi** - Manual para usuarios no técnicos
 
 ---
@@ -77,7 +76,6 @@ Proyecto/
 
 **Jose Ribelles**  
 Tutor de proyecto: Luis Elía  
-Tutor de prácticas: Javier Morales
 
 ---
 
