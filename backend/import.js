@@ -6,7 +6,7 @@ const exportFile = "./data-import/export.tar.gz";
 if (fs.existsSync(exportFile)) {
   try {
     console.log("Importando datos...");
-    execSync(`npx strapi import --file ${exportFile} --force`, { stdio: "inherit" });
+    execSync(`pnpm strapi import --file ${exportFile} --force`, { stdio: "inherit" });
     console.log("Importación completada.");
   } catch (error) {
     console.log("Error al importar:", error.message);
