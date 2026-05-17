@@ -33,14 +33,14 @@
     "descripcion": {
       "type": "blocks"
     },
-    "botones": {
-      "type": "component",
-      "component": "elements.boton",
-      "repeatable": true
-    },
     "features": {
       "type": "component",
       "component": "elements.icon-text",
+      "repeatable": true
+    },
+    "botones": {
+      "type": "component",
+      "component": "elements.boton",
       "repeatable": true
     }
   },
